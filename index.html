@@ -6,15 +6,36 @@
     <title>Destinations</title>
     <link href="./src/css/output.css" rel="stylesheet">
 </head>
-<body class="w-screen h-screen">
+<body class="w-screen h-screen bg-fixed bg-no-repeat bg-cover bg-[url(/src/assets/home/background-home-mobile.jpg)]">
 
-<div class="w-full h-full bg-fixed bg-no-repeat bg-cover bg-[url(/src/assets/home/background-home-mobile.jpg)]">
-    <nav class="flex justify-between items-center w-full p-6">
-        <img class="w-12 h-12" src="./src/assets/shared/logo.svg" alt="">
-        <img class="w-6 h-[21px]" src="./src/assets/shared/icon-hamburger.svg" alt="">
-    </nav>
+<nav class="flex justify-between items-center w-full p-6">
+    <img alt="" class="w-12 h-12" src="./src/assets/shared/logo.svg">
+    <img alt="" class="w-6 h-[21px]" src="./src/assets/shared/icon-hamburger.svg">
+</nav>
 
-</div>
+<main class="relative p-6 h-[calc(100vh-48px)]">
+    <div class="flex flex-col h-full">
+        <div class="flex flex-col items-center gap-6">
+            <h1 class="text-[rgb(208,214,249)] text-base font-[family-name:var(--barlow-condensed)] tracking-[2.5px]">
+                SO, YOU WANT TO TRAVEL TO</h1>
+
+            <h2 class="text-white font-[family-name:var(--bellefair)] text-[80px]/20">SPACE</h2>
+
+            <p class="text-[rgb(208,214,249)] text-center font-[family-name:var(--barlow)] text-[15px]/[27px]">Let’s
+                face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of
+                on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world
+                experience!</p>
+        </div>
+
+        <div class="w-full h-[387px] flex items-center justify-center">
+            <div class="peer flex items-center rounded-full bg-white w-36 h-36">
+                <p class="m-auto text-center font-[family-name:var(--bellefair)] text-lg">EXPLORE</p>
+            </div>
+            <span class="opacity-0 absolute inset-[-1] m-auto border-[150px] border-white rounded-full w-36 h-36 z-[-1] peer-hover:opacity-10 transition-opacity duration-300"></span>
+        </div>
+    </div>
+</main>
+
 
 <script src="./src/js/script.js"></script>
 </body>
