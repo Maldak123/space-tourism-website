@@ -1,2 +1,17 @@
 *.prettierrc
 *.mjs
+
+# ESLint
+.eslintrc
+.eslintrc.json
+.eslintrc.js
+.eslintrc.yaml
+.eslintrc.yml
+
+# Prettier
+.prettierrc
+.prettierrc.json
+.prettierrc.js
+.prettierrc.yaml
+.prettierrc.yml
+.prettierignore
