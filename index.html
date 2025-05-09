@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/css/output.css">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/css/output.css" />
+  <link rel="shortcut icon" href="src/assets/favicon-32x32.png" type="image/x-icon" />
+  <title>Space Tourism Website</title>
 </head>
-<body>
+
+<body class="w-screen h-screen overflow-hidden bg-[url(/src/assets/home/background-home-mobile.jpg)] bg-no-repeat bg-cover bg-fixed text-white">
+  <header class="flex items-center justify-between p-6">
+    <img src="src/assets/shared/logo.svg" alt="Logo" class="w-10 h-10 relative">
+
+    <input type="checkbox" name="menu" id="menu-nav" class="peer z-1 block">
+
+    <nav class="z-0 w-[66vw] h-screen backdrop-blur-2xl hidden peer-checked:flex-col peer-checked:flex gap-8 absolute p-8 pt-32 right-0 top-0 font-(family-name:--barlow-cond)">
+      <div class="menu-gap">
+        <strong class="tracking-[2.7px]">00</strong><a class="text-base tracking-[2px] uppercase" href="">Home</a>
+      </div>
+      <div class="menu-gap">
+        <strong class="tracking-[2.7px]">01</strong><a class="text-base tracking-[2px] uppercase" href="">Destination</a>
+      </div>
+      <div class="menu-gap">
+        <strong class="tracking-[2.7px]">02</strong><a class="text-base tracking-[2px] uppercase" href="">Crew</a>
+      </div>
+      <div class="menu-gap">
+        <strong class="tracking-[2.7px]">03</strong><a class="text-base tracking-[2px] uppercase" href="">Technology</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="h-[calc(100%-64px)]">
+    <section class="h-full flex flex-col items-center p-6">
+      <h2 class="font-(family-name:--barlow-cond) text-[16px] tracking-[0.15em] text-blue300 mb-6">SO, YOU WANT TO TRAVEL TO</h2>
+      <h1 class="font-(family-name:--bellefair) text-[80px]/20 mb-6">SPACE</h1>
+
+      <p class="font-(family-name:--barlow) text-center text-[15px]/[27px] text-blue300">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+
+      <div class="w-full h-full flex items-center justify-center">
+        <div class="w-36 h-36 bg-white rounded-full flex items-center justify-center">
+          <p class="font-(family-name:--bellefair) text-blue900 text-[18px]">EXPLORE</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="src/js/script.js"></script>
 </body>
+
 </html>

@@ -1,1 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
+
 @import "tailwindcss";
+
+@theme{
+  --barlow: "Barlow", serif;
+  --barlow-cond: "Barlow Condensed", serif;
+  --bellefair: "Bellefair", serif;
+  --color-blue300: #D0D6F9;
+  --color-blue900: #0B0D17;
+}
+@layer components{
+  #menu-nav{
+    appearance: none;
+    width: 24px;
+    height: 21px;
+    background-image: url('../assets/shared/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-size: fit;
+    &:checked{
+      background-image: url('../assets/shared/icon-close.svg');
+    }
+  }
+
+  .menu-gap{
+    display: flex;
+    gap: 12px;
+  }
+}
