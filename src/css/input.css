@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@layer theme{
+  :root{
+    --bellefair: "Bellefair", var(--font-mono);
+    --barlow: "Barlow", var(--font-mono);
+    --barlow-cond: "Barlow Condensed", serif;
+
+    --blue-900: #0B0D17;
+    --blue-300: #D0D6F9;
+  }
+}
+@layer base{
+  html{
+    line-height: 1;
+  }
+}

@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./src/css/output.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./src/css/output.css" />
+  <link rel="shortcut icon" href="./src/assets/favicon-32x32.png" type="image/x-icon">
   <title>Space Tourism Website</title>
 </head>
-<body>
-  
+
+<body class="h-screen flex flex-col bg-[url(../assets/home/background-home-mobile.jpg)] bg-no-repeat bg-cover">
+  <header class="p-6">
+    <nav class="flex justify-between content-center">
+      <img src="./src/assets/shared/logo.svg" alt="Logo" class="w-10 h-10">
+
+
+      <label for="menu" class="flex">
+        <input type="checkbox" name="menu" id="menu" class="w-6 h-[21px] peer appearance-none bg-[url(../assets/shared/icon-hamburger.svg)] bg-no-repeat bg-auto self-center checked:bg-[url(../assets/shared/icon-close.svg)] checked:w-6 checked:h-[21px] checked:rotate-90 transition-all">
+      </label>
+    </nav>
+  </header>
+
+  <main class="p-6 flex flex-col flex-grow">
+    <section class="text-center flex flex-col gap-6">
+      <h3 class="font-(family-name:--barlow-cond) text-[var(--blue-300)] text-base tracking-[0.12em]">SO, YOU WANT TO TRAVEL TO</h3>
+
+      <h1 class="font-(family-name:--bellefair) text-white text-[80px]">SPACE</h1>
+
+      <p class="font-(family-name:--barlow) text-[var(--blue-300)] text-[15px]/[32.4px]">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world
+        experience!</p>
+    </section>
+
+    <section class="flex items-center justify-center w-full flex-grow relative">
+      <div class="rounded-full hover:border-80 hover:border-[rgba(255,255,255,.1)] transition-all">
+        <button class="font-(family-name:--bellefair) text-[var(--blue-900)] text-lg bg-white rounded-full w-[144px] h-[144px] text-center">
+          EXPLORE
+        </button>
+      </div>
+    </section>
+  </main>
 
   <script src="./src/js/script.js" defer></script>
 </body>
+
 </html>
