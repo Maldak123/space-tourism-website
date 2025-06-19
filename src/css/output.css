@@ -175,6 +175,9 @@
   .fixed {
     position: fixed;
   }
+  .relative {
+    position: relative;
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -305,11 +308,17 @@
   .p-8 {
     padding: calc(var(--spacing) * 8);
   }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
   .pt-\[112px\] {
     padding-top: 112px;
   }
   .pr-6 {
     padding-right: calc(var(--spacing) * 6);
+  }
+  .pb-12 {
+    padding-bottom: calc(var(--spacing) * 12);
   }
   .text-center {
     text-align: center;

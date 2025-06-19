@@ -1,4 +1,4 @@
-// Toggling navbar
+// Toggleable navbar
 const menu = document.querySelectorAll("#menu");
 
 menu.forEach((e) => {
