@@ -7,6 +7,12 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --tracking-widest: 0.1em;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -157,16 +163,211 @@
   }
 }
 @layer utilities {
+  .fixed {
+    position: fixed;
+  }
   .contents {
     display: contents;
   }
+  .flex {
+    display: flex;
+  }
   .table {
     display: table;
+  }
+  .size-max {
+    width: max-content;
+    height: max-content;
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
+  .h-36 {
+    height: calc(var(--spacing) * 36);
+  }
+  .h-\[382px\] {
+    height: 382px;
+  }
+  .h-auto {
+    height: auto;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .max-h-full {
+    max-height: 100%;
+  }
+  .max-h-screen {
+    max-height: 100vh;
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-36 {
+    width: calc(var(--spacing) * 36);
+  }
+  .w-\[327px\] {
+    width: 327px;
+  }
+  .w-fit {
+    width: fit-content;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .w-screen {
+    width: 100vw;
+  }
+  .max-w-full {
+    max-width: 100%;
+  }
+  .max-w-screen {
+    max-width: 100vw;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-\[url\(\.\.\/assets\/home\/background-home-mobile\.jpg\)\] {
+    background-image: url(../assets/home/background-home-mobile.jpg);
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .pt-\[112px\] {
+    padding-top: 112px;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .font-\(family-name\:--barlow\) {
+    font-family: var(--barlow);
+  }
+  .font-\(family-name\:--barlow-c\) {
+    font-family: var(--barlow-c);
+  }
+  .font-\(family-name\:--bellefair\) {
+    font-family: var(--bellefair);
+  }
+  .text-\[15px\]\/\[20\.5px\] {
+    font-size: 15px;
+    line-height: 20.5px;
+  }
+  .text-\[15px\]\/\[25px\] {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .text-\[15px\]\/\[27px\] {
+    font-size: 15px;
+    line-height: 27px;
+  }
+  .text-\[15px\]\/\[30\.5px\] {
+    font-size: 15px;
+    line-height: 30.5px;
+  }
+  .text-\[15px\]\/\[30\] {
+    font-size: 15px;
+    line-height: 30;
+  }
+  .text-\[15px\]\/\[30px\] {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .text-\[15px\]\/\[40\.5px\] {
+    font-size: 15px;
+    line-height: 40.5px;
+  }
+  .text-\[80px\]\/\[96px\] {
+    font-size: 80px;
+    line-height: 96px;
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
+  .text-\[80px\] {
+    font-size: 80px;
+  }
+  .tracking-widest {
+    --tw-tracking: var(--tracking-widest);
+    letter-spacing: var(--tracking-widest);
+  }
+  .text-\[var\(--blue\)\] {
+    color: var(--blue);
+  }
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+}
+@layer theme {
+  :root {
+    --bellefair: "Bellefair", --font-mono;
+    --barlow: "Barlow", --font-mono;
+    --barlow-c: "Barlow Condensed", --font-mono;
+    --blue: #D0D6F9;
+    --dark-blue: #0B0D17;
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-outline-style {
   syntax: "*";
@@ -176,6 +377,8 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-tracking: initial;
       --tw-outline-style: solid;
     }
   }

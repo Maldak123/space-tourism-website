@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@layer theme{
+  :root{
+    --bellefair: "Bellefair", --font-mono;
+    --barlow: "Barlow", --font-mono;
+    --barlow-c: "Barlow Condensed", --font-mono;
+
+    --blue: #D0D6F9;
+    --dark-blue: #0B0D17;
+  }
+}
