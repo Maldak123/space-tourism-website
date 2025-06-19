@@ -8,6 +8,11 @@
 .nav_item{
   letter-spacing: 2px;
 }
+.active_destination_nav{
+  height: calc(var(--spacing) * 8);
+  border-bottom-width: 3px;
+  border-color: var(--color-white)
+}
 
 @layer theme{
   :root{
