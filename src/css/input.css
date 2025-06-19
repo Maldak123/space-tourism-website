@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+.nav_span{
+  margin-right: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 2.7px;
+}
+.nav_item{
+  letter-spacing: 2px;
+}
+
 @layer theme{
   :root{
     --bellefair: "Bellefair", --font-mono;

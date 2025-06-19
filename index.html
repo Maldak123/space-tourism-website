@@ -18,7 +18,18 @@
   <header class="fixed p-6 w-full flex justify-between items-center">
     <img src="./src/assets/shared/logo.svg" alt="Logo" class="w-10">
 
-    <img src="./src/assets/shared/icon-hamburger.svg" alt="Menu" class="w-6 h-5">
+    <img src="./src/assets/shared/icon-hamburger.svg" alt="Menu" id="menu" class="w-6 h-5">
+
+    <nav id="nav_bar" class="absolute opacity-0 p-8 pr-6 transition-all duration-300 ease-in-out -right-full flex top-0 w-2/3 h-screen bg-[rgba(11,13,23,15%)] backdrop-blur-2xl flex-col gap-12 items-end">
+      <img src="./src/assets/shared/icon-close.svg" alt="Close Menu" id="menu" class="w-6 h-6 justify-self-end">
+
+      <ul class="w-full text-left text-white text-base flex flex-col gap-8 font-(family-name:--barlow-c)">
+        <li class="nav_item"><span class="nav_span">00</span>HOME</li>
+        <li class="nav_item"><span class="nav_span">00</span>DESTINATION</li>
+        <li class="nav_item"><span class="nav_span">00</span>CREW</li>
+        <li class="nav_item"><span class="nav_span">00</span>TECHNOLOGY</li>
+      </ul>
+    </nav>
   </header>
 
   <main class="h-full w-full bg-[url(../assets/home/background-home-mobile.jpg)] bg-cover bg-no-repeat p-6 pt-[112px]">
