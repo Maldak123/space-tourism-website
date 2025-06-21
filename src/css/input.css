@@ -13,6 +13,16 @@
   border-bottom-width: 3px;
   border-color: var(--color-white)
 }
+.dots{
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  opacity: 17.44%;
+}
+.active_dot{
+  opacity: 100%;
+}
 
 @layer theme{
   :root{
