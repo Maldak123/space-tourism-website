@@ -186,6 +186,9 @@
   .-right-full {
     right: -100%;
   }
+  .z-999 {
+    z-index: 999;
+  }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
