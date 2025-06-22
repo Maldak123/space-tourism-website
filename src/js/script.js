@@ -45,12 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Navbar sections activation
   function changingSec(x) {
-    if (currentSec === x) {
-      return;
-    } else {
-      sections[currentSec].classList.toggle("hidden");
-      sections[x].classList.toggle("hidden");
-      currentSec = x;
-    }
+    if (currentSec === x) return;
+    
+    sections[currentSec].classList.toggle("hidden");
+    sections[x].classList.toggle("hidden");
+    currentSec = x;
   }
 });
