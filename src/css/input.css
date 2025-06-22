@@ -23,6 +23,33 @@
 .active_dot{
   opacity: 100%;
 }
+.pagination{
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-family: var(--bellefair);
+}
+.pagination::before{
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background-color: transparent;
+  border: 1px solid white;
+  opacity: 25%;
+}
+.pagination_active{
+  border: none;
+  background-color: #fff;
+  color: var(--dark-blue);
+}
 
 @layer theme{
   :root{
