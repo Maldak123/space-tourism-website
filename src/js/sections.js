@@ -1,6 +1,5 @@
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
   let spaceData = null;
-
 
   const destinationNavItems = document.querySelectorAll("#f .nav_item");
   const destinationImageElement = document.querySelector("#section:nth-of-type(2) img");
@@ -28,7 +27,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       spaceData = await response.json();
-      console.log("Dados JSON carregados:", spaceData);
 
       displayDestination(0);
       displayCrew(0);
@@ -43,13 +41,23 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const destination = spaceData.destinations[index];
 
-    destinationNavItems.forEach((item, idx) => {
+    destinationImageElement.classList.add("opacity-0");
+    destinationNameElement.classList.add("opacity-0");
+
+    setTimeout(() => {
       if (destinationImageElement) destinationImageElement.src = destination.images.webp;
       if (destinationNameElement) destinationNameElement.textContent = destination.name.toUpperCase();
       if (destinationDescriptionElement) destinationDescriptionElement.textContent = destination.description;
       if (destinationDistanceElement) destinationDistanceElement.textContent = destination.distance.toUpperCase();
       if (destinationTravelElement) destinationTravelElement.textContent = destination.travel.toUpperCase();
 
+      setTimeout(() => {
+        destinationImageElement.classList.remove("opacity-0");
+        destinationNameElement.classList.remove("opacity-0");
+      }, 0);
+    }, 100);
+
+    destinationNavItems.forEach((item, idx) => {
       if (idx === index) {
         item.classList.add("active_destination_nav");
       } else {
@@ -63,11 +71,27 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const member = spaceData.crew[index];
 
-    if (crewRoleElement) crewRoleElement.textContent = member.role.toUpperCase();
-    if (crewNameElement) crewNameElement.textContent = member.name.toUpperCase();
-    if (crewBioElement) crewBioElement.textContent = member.bio;
-    if (crewImageElement) crewImageElement.src = member.images.webp;
-    if (crewImageElement) crewImageElement.alt = member.name;
+    crewRoleElement.classList.add("opacity-0");
+    crewNameElement.classList.add("opacity-0");
+    crewBioElement.classList.add("opacity-0");
+    crewImageElement.classList.add("opacity-0");
+    crewImageElement.classList.add("opacity-0");
+
+    setTimeout(() => {
+      if (crewRoleElement) crewRoleElement.textContent = member.role.toUpperCase();
+      if (crewNameElement) crewNameElement.textContent = member.name.toUpperCase();
+      if (crewBioElement) crewBioElement.textContent = member.bio;
+      if (crewImageElement) crewImageElement.src = member.images.webp;
+      if (crewImageElement) crewImageElement.alt = member.name;
+
+      setTimeout(() => {
+        crewRoleElement.classList.remove("opacity-0");
+        crewNameElement.classList.remove("opacity-0");
+        crewBioElement.classList.remove("opacity-0");
+        crewImageElement.classList.remove("opacity-0");
+        crewImageElement.classList.remove("opacity-0");
+      }, 0);
+    }, 100);
 
     crewNavDots.forEach((dot, idx) => {
       if (idx === index) {
@@ -83,10 +107,24 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const tech = spaceData.technology[index];
 
-    if (technologyImageElement) technologyImageElement.src = tech.images.portrait;
-    if (technologyTerminologyElement) technologyTerminologyElement.textContent = "THE TERMINOLOGY…";
-    if (technologyNameElement) technologyNameElement.textContent = tech.name.toUpperCase();
-    if (technologyDescriptionElement) technologyDescriptionElement.textContent = tech.description;
+    technologyImageElement.classList.add("opacity-0");
+    technologyTerminologyElement.classList.add("opacity-0");
+    technologyNameElement.classList.add("opacity-0");
+    technologyDescriptionElement.classList.add("opacity-0");
+
+    setTimeout(() => {
+      if (technologyImageElement) technologyImageElement.src = tech.images.portrait;
+      if (technologyTerminologyElement) technologyTerminologyElement.textContent = "THE TERMINOLOGY…";
+      if (technologyNameElement) technologyNameElement.textContent = tech.name.toUpperCase();
+      if (technologyDescriptionElement) technologyDescriptionElement.textContent = tech.description;
+
+      setTimeout(() => {
+        technologyImageElement.classList.remove("opacity-0");
+        technologyTerminologyElement.classList.remove("opacity-0");
+        technologyNameElement.classList.remove("opacity-0");
+        technologyDescriptionElement.classList.remove("opacity-0");
+      }, 0);
+    }, 100);
 
     technologyPagination.forEach((dot, idx) => {
       if (idx === index) {
