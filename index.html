@@ -15,15 +15,32 @@
 </head>
 
 <body class="h-screen w-screen">
-  <header class="fixed p-6 w-full flex justify-between items-center z-999">
-    <img id="logo" src="./src/assets/shared/logo.svg" alt="Logo" class="w-10">
+  <header class="fixed p-6 w-full flex justify-between items-center z-999
+                 md:p-0 md:gap-12
+                 lg:pt-10">
 
-    <img src="./src/assets/shared/icon-hamburger.svg" alt="Menu" id="menu" class="w-6 h-5">
+    <div class="lg:w-full lg:flex lg:relative lg:items-center">
+      <img id="logo" src="./src/assets/shared/logo.svg" alt="Logo" class="w-10
+                  md:ml-10 md:w-12
+                  lg:ml-12">
+      <span class="hidden
+                   lg:bg-white lg:opacity-25 lg:w-[calc(726px / 2)] lg:absolute lg:h-[1.1px] lg:flex
+                   lg:w-[726px] lg:ml-32
+                   z-999"></span>
+    </div>
 
-    <nav id="nav_bar" class="absolute opacity-0 p-8 pr-6 transition-all duration-600 ease-in-out -right-full flex top-0 w-2/3 h-screen bg-[rgba(11,13,23,15%)] backdrop-blur-2xl flex-col gap-12 items-end">
-      <img src="./src/assets/shared/icon-close.svg" alt="Close Menu" id="menu" class="w-6 h-6 justify-self-end">
+    <img src="./src/assets/shared/icon-hamburger.svg" alt="Menu" id="menu" class="w-6 h-5
+                md:hidden">
 
-      <ul class="w-full text-left text-white text-base flex flex-col gap-8 font-(family-name:--barlow-c)">
+    <nav id="nav_bar" class="absolute opacity-0 p-8 pr-6 transition-all duration-600 ease-in-out -right-full flex top-0 w-2/3 h-screen bg-[rgba(255,255,255,5%)] backdrop-blur-2xl flex-col gap-12 items-end
+                             md:-right-0 md:h-fit md:opacity-100 md:relative md:w-full md:transition-none md:px-10
+                             lg:-right-6">
+      <img src="./src/assets/shared/icon-close.svg" alt="Close Menu" id="menu" class="w-6 h-6 justify-self-end
+                  md:hidden">
+
+      <ul class="w-full text-left text-white text-base flex flex-col gap-8 font-(family-name:--barlow-c)
+                 md:h-12 md:flex-row md:justify-end md:gap-12 md:items-center
+                 lg:pl-32 lg:pr-16">
         <li id="nav_item" class="nav_item"><span class="nav_span">00</span>HOME</li>
         <li id="nav_item" class="nav_item"><span class="nav_span">01</span>DESTINATION</li>
         <li id="nav_item" class="nav_item"><span class="nav_span">02</span>CREW</li>
@@ -32,51 +49,75 @@
     </nav>
   </header>
 
-  <main id="section" class="h-screen w-full bg-[url(../assets/home/background-home-mobile.jpg)] bg-cover bg-no-repeat p-6 flex flex-col justify-between">
-      <section class="w-full text-center flex flex-col gap-6 pt-[88px]">
-        <p class="font-(family-name:--barlow-c) text-[var(--blue)] tracking-widest">SO, YOU WANT TO TRAVEL TO</p>
+  <main id="section" class="h-screen w-full bg-[url(../assets/home/background-home-mobile.jpg)] bg-cover bg-no-repeat p-6 flex flex-col justify-between
+                            md:bg-[url(../assets/home/background-home-tablet.jpg)] md:items-center
+                            lg:bg-[url(../assets/home/background-home-desktop.jpg)] lg:p-32 lg:justify-center">
+    <section class="w-full text-center flex flex-col gap-6 pt-[88px]
+                    md:w-4/5 md:pt-54 md:px-10">
+      <p class="font-(family-name:--barlow-c) text-[var(--blue)] tracking-widest
+                md:text-[28px]">SO, YOU WANT TO TRAVEL TO</p>
 
-        <h1 class="font-(family-name:--bellefair) text-white text-[80px]/[96px]">SPACE</h1>
+      <h1 class="font-(family-name:--bellefair) text-white text-[80px]/[96px]
+                 md:text-[144px] md:leading-none">SPACE</h1>
 
-        <p class="font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
-      </section>
-
-      <section class="w-full h-full flex items-center justify-center">
-        <button id="start_btn" class="font-(family-name:--bellefair) text-black text-lg rounded-full bg-white w-36 h-36">EXPLORE</button>
-      </section>
-  </main>
-
-  <main id="section" class="w-full bg-[url(../assets/destination/background-destination-mobile.jpg)] bg-cover bg-no-repeat p-6 hidden flex-col justify-between">
-    <section class="w-full text-center flex flex-col items-center gap-6 pt-[88px]">
-      <p class="font-(family-name:--barlow-c) text-white tracking-widest"><span class="nav_span opacity-25">02</span>PICK YOUR DESTINATION</p>
-
-      <img src="./src/assets/destination/image-moon.webp" alt="Moon" class="transition-opacity duration-300 w-[150px] py-[26.5px]">
-
-      <nav id="f" class="w-screen">
-        <ul class="w-full font-(family-name:--barlow-c) tracking-[2px] text-sm text-white flex justify-center gap-8">
-          <li class="nav_item active_destination_nav">MOON</li>
-          <li class="nav_item">MARS</li>
-          <li class="nav_item">EUROPA</li>
-          <li class="nav_item">TITAN</li>
-        </ul>
-      </nav>
-
-      <h1 id="name" class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[56px]/[64px]">MOON</h1>
-
-      <p id="texto" class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+      <p class="font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!
       </p>
     </section>
 
-    <section class="w-full h-full flex flex-col gap-6 mt-6 border-t-1 border-[rgba(255,255,255,25%)] text-center">
-      <div class="pt-6 flex flex-col gap-3">
-        <h3 class="font-(family-name:--barlow-c) text-[var(--blue)] text-sm tracking-widest">AVG. DISTANCE</h3>
+    <section class="w-full h-full flex items-center justify-center">
+      <button id="start_btn" class="font-(family-name:--bellefair) text-black text-lg rounded-full bg-white w-36 h-36
+                                    md:size-[272px] md:text-[32px]">EXPLORE</button>
+    </section>
+  </main>
 
-        <p class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[28px]">384,400 KM</p>
-      </div>
-      <div class="flex flex-col gap-3">
-        <h3 class="font-(family-name:--barlow-c) text-[var(--blue)] text-sm tracking-widest">EST. TRAVEL TIME</h3>
+  <main id="section" class="w-full bg-[url(../assets/destination/background-destination-mobile.jpg)] bg-cover bg-no-repeat p-6 hidden flex-col justify-between
+                            md:bg-[url(../assets/destination/background-destination-tablet.jpg)] md:h-screen">
+    <div class="flex flex-col items-center gap-6 pt-[88px]
+                            md:gap-8 md:pt-32">
+      <p class="font-(family-name:--barlow-c) text-white tracking-widest
+                            md:text-[20px] md:w-full md:text-left md:pl-5"><span class="nav_span opacity-25">02</span>PICK YOUR DESTINATION</p>
 
-        <p class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[28px]">3 DAYS</p>
+      <img src="./src/assets/destination/image-moon.webp" alt="Moon" class="transition-opacity duration-300 w-[150px] py-[26.5px]
+                            md:size-[300px] md:p-0 md:my-8">
+    </div>
+
+    <section class="flex flex-col w-full items-center">
+      <div class="w-full text-center flex flex-col items-center gap-6
+                  md:w-4/6">
+        <nav id="f" class="w-screen">
+          <ul class="w-full font-(family-name:--barlow-c) tracking-[2px] text-sm text-white flex justify-center gap-8
+                    md:text-base">
+            <li class="nav_item active_destination_nav">MOON</li>
+            <li class="nav_item">MARS</li>
+            <li class="nav_item">EUROPA</li>
+            <li class="nav_item">TITAN</li>
+          </ul>
+        </nav>
+
+        <h1 id="name" class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[56px]/[64px]
+                              md:text-[88px] leading-none">MOON</h1>
+
+        <p id="texto" class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history
+          by
+          visiting the Luna 2 and Apollo 11 landing sites.
+        </p>
+
+
+        <div class="w-full h-full flex flex-col gap-6 mt-6 border-t-1 border-[rgba(255,255,255,25%)] text-center
+                    md:flex-row md:gap-6 md:items-center md:m-0">
+          <div class="pt-6 flex flex-col gap-3
+                      md:w-full md:text-center"">
+            <h3 class="font-(family-name:--barlow-c) text-[var(--blue)] text-sm tracking-widest">AVG. DISTANCE</h3>
+
+            <p class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[28px]">384,400 KM</p>
+          </div>
+          <div class="flex flex-col gap-3
+                      md:pt-6 md:w-full md:text-center">
+            <h3 class="font-(family-name:--barlow-c) text-[var(--blue)] text-sm tracking-widest">EST. TRAVEL TIME</h3>
+
+            <p class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[28px]">3 DAYS</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -95,7 +136,6 @@
           <p class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
           </p>
         </div>
-
 
         <div class="flex gap-4 justify-center">
           <div class="dots active_dot"></div>
@@ -134,7 +174,8 @@
           <p class="font-(family-name:--bellefair) text-white text-[18px] opacity-50">THE TERMINOLOGY…</p>
           <h1 class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[24px]">LAUNCH VEHICLE</h1>
 
-          <p class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
+          <p class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is
+            the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
           </p>
         </div>
       </div>
