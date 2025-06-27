@@ -20,22 +20,23 @@
                  lg:pt-10">
 
     <div class="lg:w-full lg:flex lg:relative lg:items-center">
-      <img id="logo" src="./src/assets/shared/logo.svg" alt="Logo" class="w-10
+      <img id="logo" src="./src/assets/shared/logo.svg" alt="Logo"
+           class="w-10
                   md:ml-10 md:w-12
                   lg:ml-12">
-      <span class="hidden
-                   lg:bg-white lg:opacity-25 lg:w-[calc(726px / 2)] lg:absolute lg:h-[1.1px] lg:flex
-                   lg:w-[726px] lg:ml-32
-                   z-999"></span>
+      <span class="hidden z-999
+                   lg:bg-white lg:opacity-25 lg:w-[726px] lg:absolute lg:h-[1.1px] lg:flex lg:ml-32"></span>
     </div>
 
-    <img src="./src/assets/shared/icon-hamburger.svg" alt="Menu" id="menu" class="w-6 h-5
+    <img src="./src/assets/shared/icon-hamburger.svg" alt="Menu" id="menu"
+         class="w-6 h-5
                 md:hidden">
 
     <nav id="nav_bar" class="absolute opacity-0 p-8 pr-6 transition-all duration-600 ease-in-out -right-full flex top-0 w-2/3 h-screen bg-[rgba(255,255,255,5%)] backdrop-blur-2xl flex-col gap-12 items-end
                              md:-right-0 md:h-fit md:opacity-100 md:relative md:w-full md:transition-none md:px-10
                              lg:-right-6">
-      <img src="./src/assets/shared/icon-close.svg" alt="Close Menu" id="menu" class="w-6 h-6 justify-self-end
+      <img src="./src/assets/shared/icon-close.svg" alt="Close Menu" id="menu"
+           class="w-6 h-6 justify-self-end
                   md:hidden">
 
       <ul class="w-full text-left text-white text-base flex flex-col gap-8 font-(family-name:--barlow-c)
@@ -71,14 +72,15 @@
   </main>
 
   <main id="section" class="w-full bg-[url(../assets/destination/background-destination-mobile.jpg)] bg-cover bg-no-repeat p-6 hidden flex-col justify-between
-                            md:bg-[url(../assets/destination/background-destination-tablet.jpg)] md:h-screen">
+                            md:bg-[url(../assets/destination/background-destination-tablet.jpg)] md:h-screen md:p-10">
     <div class="flex flex-col items-center gap-6 pt-[88px]
-                            md:gap-8 md:pt-32">
+                md:gap-8 md:pt-28">
       <p class="font-(family-name:--barlow-c) text-white tracking-widest
-                            md:text-[20px] md:w-full md:text-left md:pl-5"><span class="nav_span opacity-25">02</span>PICK YOUR DESTINATION</p>
+                md:text-[20px] md:w-full md:text-left"><span class="nav_span opacity-25">01</span>PICK YOUR DESTINATION</p>
 
-      <img src="./src/assets/destination/image-moon.webp" alt="Moon" class="transition-opacity duration-300 w-[150px] py-[26.5px]
-                            md:size-[300px] md:p-0 md:my-8">
+      <img src="./src/assets/destination/image-moon.webp" alt="Moon"
+           class="transition-opacity duration-300 w-[150px] py-[26.5px]
+                  md:size-[300px] md:p-0 md:my-8">
     </div>
 
     <section class="flex flex-col w-full items-center">
@@ -95,26 +97,22 @@
         </nav>
 
         <h1 id="name" class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[56px]/[64px]
-                              md:text-[88px] leading-none">MOON</h1>
+                             md:text-[88px] leading-none">MOON</h1>
 
-        <p id="texto" class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history
-          by
+        <p id="texto" class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by
           visiting the Luna 2 and Apollo 11 landing sites.
         </p>
 
-
-        <div class="w-full h-full flex flex-col gap-6 mt-6 border-t-1 border-[rgba(255,255,255,25%)] text-center
+        <div class="w-full flex flex-col gap-6 mt-6 border-t-1 border-[rgba(255,255,255,25%)] text-center
                     md:flex-row md:gap-6 md:items-center md:m-0">
           <div class="pt-6 flex flex-col gap-3
-                      md:w-full md:text-center"">
+                      md:w-full md:text-center">
             <h3 class="font-(family-name:--barlow-c) text-[var(--blue)] text-sm tracking-widest">AVG. DISTANCE</h3>
-
             <p class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[28px]">384,400 KM</p>
           </div>
           <div class="flex flex-col gap-3
                       md:pt-6 md:w-full md:text-center">
             <h3 class="font-(family-name:--barlow-c) text-[var(--blue)] text-sm tracking-widest">EST. TRAVEL TIME</h3>
-
             <p class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[28px]">3 DAYS</p>
           </div>
         </div>
@@ -122,18 +120,26 @@
     </section>
   </main>
 
-  <main id="section" class="w-full h-fit bg-[url(../assets/crew/background-crew-mobile.jpg)] bg-cover bg-no-repeat p-6 hidden flex-col justify-between">
-    <section class="w-full h-full text-center flex flex-col items-center justify-between gap-8 pt-[88px]">
-      <div class="flex flex-col gap-13">
-        <p class="font-(family-name:--barlow-c) text-white tracking-widest"><span class="nav_span opacity-25">03</span>MEET YOUR CREW</p>
+  <main id="section" class="relative w-full min-h-screen bg-[url(../assets/crew/background-crew-mobile.jpg)] bg-cover bg-no-repeat p-6 flex hidden flex-col
+                            md:bg-[url(../assets/crew/background-crew-tablet.jpg)] md:p-10 gap-8 md:h-full md:overflow-hidden">
+    <section class="w-full text-center pt-[88px]
+                    md:p-0">
+      <div class="flex flex-col gap-13 w-full items-center
+                  md:gap-6 md:pt-28">
+        <p class="font-(family-name:--barlow-c) text-white tracking-widest
+                  md:text-[20px] md:w-full md:text-left"><span class="nav_span opacity-25">02</span>MEET YOUR CREW</p>
 
-        <div class="flex flex-col gap-6">
-          <div>
-            <p class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[18px] opacity-50">COMMANDER</p>
-            <h1 class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[24px]">DOUGLAS HURLEY</h1>
+        <div class="flex flex-col gap-6
+                    md:max-w-[512px] md:w-full">
+          <div class="md:flex md:flex-col md:gap-4 md:pt-10">
+            <p class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[18px] opacity-50
+                      md:text-2xl">COMMANDER</p>
+            <h1 class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[24px]
+                      md:text-[40px]">DOUGLAS HURLEY</h1>
           </div>
 
-          <p class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
+          <p class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]
+                    md:text-[16px]">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
           </p>
         </div>
 
@@ -144,39 +150,54 @@
           <div class="dots"></div>
         </div>
       </div>
-
-      <img class="transition-opacity duration-300 w-[271.27px] h-[340px] mask-b-from-77%" src="./src/assets/crew/image-douglas-hurley.webp" alt="Douglas Hurley Photo">
     </section>
+
+    <div class="w-full h-full flex justify-center relative">
+      <img class="md:absolute h-full transition-opacity duration-300 mask-b-from-77%
+                  md:w-6/10 md:h-[123%] md:-bottom-25"
+           src="./src/assets/crew/image-douglas-hurley.webp" alt="Douglas Hurley Photo">
+    </div>
   </main>
 
-  <main id="section" class="w-full h-fit bg-[url(../assets/technology/background-technology-mobile.jpg)] bg-cover bg-no-repeat p-6 hidden flex-col justify-between">
-    <section class="w-full h-full text-center flex flex-col items-center gap-20 pt-[88px]">
-      <p class="font-(family-name:--barlow-c) text-white tracking-widest"><span class="nav_span opacity-25">03</span>SPACE LAUNCH 101</p>
+  <main id="section" class="w-full h-full bg-[url(../assets/technology/background-technology-mobile.jpg)] bg-cover bg-no-repeat hidden flex-col">
+    <section class="w-full h-full text-center flex flex-col items-center gap-20 pt-[88px] p-6 pb-12
+                    md:p-10">
+      <p class="w-full font-(family-name:--barlow-c) text-white tracking-widest
+                md:pt-22 md:text-left md:text-[20px]"><span class="nav_span opacity-25">03</span>SPACE LAUNCH 101</p>
 
-      <div class="flex flex-col gap-8">
-        <img class="transition-opacity duration-300 min-w-screen h-[258px]" src="./src/assets/technology/image-launch-vehicle-portrait.jpg" alt="">
+      <div class="flex flex-col items-center gap-8
+                  md:gap-10">
+        <img class="aspect-video transition-opacity duration-300 min-w-screen h-[258px]
+                    md:h-[357px]"
+             src="./src/assets/technology/image-launch-vehicle-portrait.jpg" alt="">
 
-        <div class="flex flex-col">
-          <div class="flex gap-4 justify-center">
-            <div class="pagination pagination_active">
-              <p>1</p>
-            </div>
-            <div class="pagination">
-              <p>2</p>
-            </div>
-            <div class="pagination">
-              <p>3</p>
+        <div class="flex flex-col gap-8">
+          <div class="flex flex-col">
+            <div class="flex gap-4 justify-center">
+              <div class="pagination pagination_active">
+                <p>1</p>
+              </div>
+              <div class="pagination">
+                <p>2</p>
+              </div>
+              <div class="pagination">
+                <p>3</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="flex flex-col gap-4 px-6">
-          <p class="font-(family-name:--bellefair) text-white text-[18px] opacity-50">THE TERMINOLOGY…</p>
-          <h1 class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[24px]">LAUNCH VEHICLE</h1>
+          <div class="flex flex-col gap-4 px-6
+                      md:max-w-[506px]">
+            <p class="font-(family-name:--bellefair) text-white text-[18px] opacity-50
+                      md:text-2xl">THE TERMINOLOGY…</p>
+            <h1 class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[24px]
+                      md:text-[40px]">LAUNCH VEHICLE</h1>
 
-          <p class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is
-            the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
-          </p>
+            <p class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket
+              is
+              the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
+            </p>
+          </div>
         </div>
       </div>
     </section>

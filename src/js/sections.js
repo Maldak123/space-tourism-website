@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   let spaceData = null;
 
   const destinationNavItems = document.querySelectorAll("#f .nav_item");

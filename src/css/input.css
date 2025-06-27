@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
-.nav_span{
+.nav_span {
   margin-right: 0.75rem;
   font-weight: bold;
   letter-spacing: 2.7px;
 }
-.nav_item{
+.nav_item {
   letter-spacing: 2px;
 }
-.active_destination_nav{
+.active_destination_nav {
   height: calc(var(--spacing) * 8);
   border-bottom-width: 3px;
-  border-color: var(--color-white)
+  border-color: var(--color-white);
 }
-.dots{
+.dots {
   border-radius: 100%;
   width: 10px;
   height: 10px;
   background-color: #fff;
   opacity: 17.44%;
 }
-.active_dot{
+.active_dot {
   opacity: 100%;
 }
-.pagination{
+.pagination {
   border-radius: 100%;
   width: 40px;
   height: 40px;
@@ -35,7 +35,7 @@
   font-size: 18px;
   font-family: var(--bellefair);
 }
-.pagination::before{
+.pagination::before {
   content: "";
   position: absolute;
   width: inherit;
@@ -45,19 +45,27 @@
   border: 1px solid white;
   opacity: 25%;
 }
-.pagination_active{
+.pagination_active {
   border: none;
   background-color: #fff;
   color: var(--dark-blue);
 }
 
-@layer theme{
-  :root{
+@media (width >= 48rem /* 768px */) {
+  .pagination {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+}
+
+@layer theme {
+  :root {
     --bellefair: "Bellefair", --font-mono;
     --barlow: "Barlow", --font-mono;
     --barlow-c: "Barlow Condensed", --font-mono;
 
-    --blue: #D0D6F9;
-    --dark-blue: #0B0D17;
+    --blue: #d0d6f9;
+    --dark-blue: #0b0d17;
   }
 }
