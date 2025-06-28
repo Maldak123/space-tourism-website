@@ -1,24 +1,23 @@
 document.addEventListener("DOMContentLoaded", async () => {
   let spaceData = null;
 
-  const destinationNavItems = document.querySelectorAll("#f .nav_item");
-  const destinationImageElement = document.querySelector("#section:nth-of-type(2) img");
-  const destinationNameElement = document.querySelector("#section:nth-of-type(2) h1#name");
-  const destinationDescriptionElement = document.querySelector("#texto");
-  const destinationDistanceElement = document.querySelector("#section:nth-of-type(2) section:nth-of-type(2) div:nth-of-type(1) p");
-  const destinationTravelElement = document.querySelector("#section:nth-of-type(2) section:nth-of-type(2) div:nth-of-type(2) p");
+  const destinationNavItems = document.querySelectorAll(".nav_destination_item");
+  const destinationImageElement = document.querySelector("#dest-image");
+  const destinationNameElement = document.querySelector("#dest-name");
+  const destinationDescriptionElement = document.querySelector("#dest-text");
+  const destinationDistanceElement = document.querySelector("#est_time");
+  const destinationTravelElement = document.querySelector("#est_travel");
 
-  const crewNavDots = document.querySelectorAll("#section:nth-of-type(3) .dots");
-  const crewRoleElement = document.querySelector("#section:nth-of-type(3) .flex-col.gap-6 > div > p");
-  const crewNameElement = document.querySelector("#section:nth-of-type(3) .flex-col.gap-6 > div > h1");
-  const crewBioElement = document.querySelector("#section:nth-of-type(3) .flex-col.gap-6 > p");
-  const crewImageElement = document.querySelector("#section:nth-of-type(3) img");
+  const crewNavDots = document.querySelectorAll(".dots");
+  const crewRoleElement = document.querySelector("#crew-role");
+  const crewNameElement = document.querySelector("#crew-name");
+  const crewBioElement = document.querySelector("#crew-text");
+  const crewImageElement = document.querySelector("#crew-pic");
 
-  const technologyPagination = document.querySelectorAll("#section:nth-of-type(4) .pagination");
-  const technologyImageElement = document.querySelector("#section:nth-of-type(4) img.min-w-screen");
-  const technologyTerminologyElement = document.querySelector("#section:nth-of-type(4) .flex-col.gap-4 > p");
-  const technologyNameElement = document.querySelector("#section:nth-of-type(4) .flex-col.gap-4 > h1");
-  const technologyDescriptionElement = document.querySelector("#section:nth-of-type(4) .flex-col.gap-4 > p:last-of-type");
+  const technologyPagination = document.querySelectorAll(".pagination");
+  const technologyImageElement = document.querySelector("#tech_pic");
+  const technologyNameElement = document.querySelector("#tech_name");
+  const technologyDescriptionElement = document.querySelector("#tech_text");
 
   async function loadSpaceData() {
     try {
@@ -27,7 +26,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       spaceData = await response.json();
-
       displayDestination(0);
       displayCrew(0);
       displayTechnology(0);
@@ -36,34 +34,41 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  function toggleDestinationNavBorder(activeItem) {
+    destinationNavItems.forEach((item) => {
+      item.classList.remove("border-white");
+      item.classList.add("border-transparent");
+    });
+    activeItem.classList.remove("border-transparent");
+    activeItem.classList.add("border-white");
+  }
+
   function displayDestination(index) {
     if (!spaceData || !spaceData.destinations || !spaceData.destinations[index]) return;
+
+    toggleDestinationNavBorder(destinationNavItems[index]);
 
     const destination = spaceData.destinations[index];
 
     destinationImageElement.classList.add("opacity-0");
     destinationNameElement.classList.add("opacity-0");
+    destinationDescriptionElement.classList.add("opacity-0");
+    destinationDistanceElement.classList.add("opacity-0");
+    destinationTravelElement.classList.add("opacity-0");
 
     setTimeout(() => {
-      if (destinationImageElement) destinationImageElement.src = destination.images.webp;
-      if (destinationNameElement) destinationNameElement.textContent = destination.name.toUpperCase();
-      if (destinationDescriptionElement) destinationDescriptionElement.textContent = destination.description;
-      if (destinationDistanceElement) destinationDistanceElement.textContent = destination.distance.toUpperCase();
-      if (destinationTravelElement) destinationTravelElement.textContent = destination.travel.toUpperCase();
+      destinationImageElement.src = destination.images.webp;
+      destinationNameElement.textContent = destination.name.toUpperCase();
+      destinationDescriptionElement.textContent = destination.description;
+      destinationDistanceElement.textContent = destination.distance.toUpperCase();
+      destinationTravelElement.textContent = destination.travel.toUpperCase();
 
-      setTimeout(() => {
-        destinationImageElement.classList.remove("opacity-0");
-        destinationNameElement.classList.remove("opacity-0");
-      }, 0);
+      destinationImageElement.classList.remove("opacity-0");
+      destinationNameElement.classList.remove("opacity-0");
+      destinationDescriptionElement.classList.remove("opacity-0");
+      destinationDistanceElement.classList.remove("opacity-0");
+      destinationTravelElement.classList.remove("opacity-0");
     }, 100);
-
-    destinationNavItems.forEach((item, idx) => {
-      if (idx === index) {
-        item.classList.add("active_destination_nav");
-      } else {
-        item.classList.remove("active_destination_nav");
-      }
-    });
   }
 
   function displayCrew(index) {
@@ -75,22 +80,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     crewNameElement.classList.add("opacity-0");
     crewBioElement.classList.add("opacity-0");
     crewImageElement.classList.add("opacity-0");
-    crewImageElement.classList.add("opacity-0");
 
     setTimeout(() => {
-      if (crewRoleElement) crewRoleElement.textContent = member.role.toUpperCase();
-      if (crewNameElement) crewNameElement.textContent = member.name.toUpperCase();
-      if (crewBioElement) crewBioElement.textContent = member.bio;
-      if (crewImageElement) crewImageElement.src = member.images.webp;
-      if (crewImageElement) crewImageElement.alt = member.name;
+      crewRoleElement.textContent = member.role.toUpperCase();
+      crewNameElement.textContent = member.name.toUpperCase();
+      crewBioElement.textContent = member.bio;
+      crewImageElement.src = member.images.webp;
+      crewImageElement.alt = member.name;
 
-      setTimeout(() => {
-        crewRoleElement.classList.remove("opacity-0");
-        crewNameElement.classList.remove("opacity-0");
-        crewBioElement.classList.remove("opacity-0");
-        crewImageElement.classList.remove("opacity-0");
-        crewImageElement.classList.remove("opacity-0");
-      }, 0);
+      crewRoleElement.classList.remove("opacity-0");
+      crewNameElement.classList.remove("opacity-0");
+      crewBioElement.classList.remove("opacity-0");
+      crewImageElement.classList.remove("opacity-0");
     }, 100);
 
     crewNavDots.forEach((dot, idx) => {
@@ -108,29 +109,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     const tech = spaceData.technology[index];
 
     technologyImageElement.classList.add("opacity-0");
-    technologyTerminologyElement.classList.add("opacity-0");
     technologyNameElement.classList.add("opacity-0");
     technologyDescriptionElement.classList.add("opacity-0");
 
     setTimeout(() => {
-      if (technologyImageElement) technologyImageElement.src = tech.images.portrait;
-      if (technologyTerminologyElement) technologyTerminologyElement.textContent = "THE TERMINOLOGY…";
-      if (technologyNameElement) technologyNameElement.textContent = tech.name.toUpperCase();
-      if (technologyDescriptionElement) technologyDescriptionElement.textContent = tech.description;
+      if (window.innerWidth >= 1024) {
+        technologyImageElement.src = tech.images.portrait;
+      } else {
+        technologyImageElement.src = tech.images.landscape;
+      }
+      technologyNameElement.textContent = tech.name.toUpperCase();
+      technologyDescriptionElement.textContent = tech.description;
 
-      setTimeout(() => {
-        technologyImageElement.classList.remove("opacity-0");
-        technologyTerminologyElement.classList.remove("opacity-0");
-        technologyNameElement.classList.remove("opacity-0");
-        technologyDescriptionElement.classList.remove("opacity-0");
-      }, 0);
+      technologyImageElement.classList.remove("opacity-0");
+      technologyNameElement.classList.remove("opacity-0");
+      technologyDescriptionElement.classList.remove("opacity-0");
     }, 100);
 
-    technologyPagination.forEach((dot, idx) => {
+    technologyPagination.forEach((pageItem, idx) => {
       if (idx === index) {
-        dot.classList.add("pagination_active");
+        pageItem.classList.add("pagination_active");
       } else {
-        dot.classList.remove("pagination_active");
+        pageItem.classList.remove("pagination_active");
       }
     });
   }
@@ -148,4 +148,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   loadSpaceData();
+
+  window.addEventListener('resize', () => {
+    const technologySection = document.querySelector("#technology-section");
+    if (technologySection && !technologySection.classList.contains('collapse')) {
+      const activeTechIndex = Array.from(technologyPagination).findIndex(item => item.classList.contains('pagination_active'));
+      if (activeTechIndex !== -1) {
+        displayTechnology(activeTechIndex);
+      }
+    }
+  });
 });

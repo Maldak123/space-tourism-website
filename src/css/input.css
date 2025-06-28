@@ -7,12 +7,20 @@
 }
 .nav_item {
   letter-spacing: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: border-color .3s ease-in-out;
 }
-.active_destination_nav {
-  height: calc(var(--spacing) * 8);
-  border-bottom-width: 3px;
-  border-color: var(--color-white);
+.nav_destination_item {
+  letter-spacing: 2px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: border-color .3s ease-in-out;
 }
+
 .dots {
   border-radius: 100%;
   width: 10px;
@@ -49,6 +57,10 @@
   border: none;
   background-color: #fff;
   color: var(--dark-blue);
+}
+
+#start_btn{
+  transition: outline-color .6s ease-in-out;
 }
 
 @media (width >= 48rem /* 768px */) {
