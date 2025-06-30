@@ -28,6 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
     navBar.classList.toggle("-right-full");
   }
 
+  function initializeNavbar() {
+    if (window.innerWidth < 768) {
+      navBar.classList.add("opacity-0");
+      navBar.classList.add("-right-full");
+      navBar.classList.remove("-right-0");
+    }
+  }
+
   if (menuOpen) {
     menuOpen.addEventListener("click", toggleNavbar);
   }
@@ -37,7 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navPages.forEach((item, index) => {
     item.addEventListener("click", () => {
-      toggleNavbar();
+      if (window.innerWidth < 768) {
+        toggleNavbar();
+      }
       toggleMainNavBorder(item);
       changeSection(index);
     });
@@ -60,38 +70,27 @@ document.addEventListener("DOMContentLoaded", () => {
   function changeSection(newSecIndex) {
     if (currentSec === newSecIndex) return;
 
-    sections[currentSec].classList.add("opacity-0");
-    sections[currentSec].classList.add("invisible");
+    sections[currentSec].classList.add("hidden");
+    sections[currentSec].classList.remove("flex");
 
-    setTimeout(() => {
-      sections[currentSec].classList.remove("flex");
-      sections[currentSec].classList.add("hidden");
+    sections[newSecIndex].classList.remove("hidden");
+    sections[newSecIndex].classList.add("flex");
 
-      sections[newSecIndex].classList.remove("hidden");
-      sections[newSecIndex].classList.add("flex");
-
-
-      sections[newSecIndex].classList.remove("opacity-0");
-      sections[newSecIndex].classList.remove("invisible");
-
-      currentSec = newSecIndex;
-    }, 300);
+    currentSec = newSecIndex;
   }
 
   sections.forEach((section, index) => {
     if (index === 0) {
       section.classList.remove("hidden");
       section.classList.add("flex");
-      section.classList.remove("opacity-0");
-      section.classList.remove("invisible");
     } else {
       section.classList.add("hidden");
       section.classList.remove("flex");
-      section.classList.add("opacity-0");
-      section.classList.add("invisible");
     }
   });
 
+  initializeNavbar();
   toggleMainNavBorder(navPages[0]);
-  // toggleNavbar();
+
+  window.addEventListener('resize', initializeNavbar);
 });
