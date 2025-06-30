@@ -29,11 +29,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/print1.jpg)
+![](./screenshots/print2.jpg)
+![](./screenshots/print3.jpg)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://space-tourism-website-theta-livid.vercel.app/)
+- Live Site URL: [Space Tourism Website](https://space-tourism-website-theta-livid.vercel.app/)
 
 ## My process
 
