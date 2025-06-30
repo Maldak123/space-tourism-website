@@ -60,31 +60,24 @@ document.addEventListener("DOMContentLoaded", () => {
   function changeSection(newSecIndex) {
     if (currentSec === newSecIndex) return;
 
-    // Inicia a transição de saída da seção atual
     sections[currentSec].classList.add("opacity-0");
     sections[currentSec].classList.add("invisible");
 
-    // Remove `flex` e adiciona `hidden` após a transição, para que a seção saia do fluxo
-    // O setTimeout deve ser igual ou ligeiramente maior que a duração da transição de opacidade no CSS (duration-300)
     setTimeout(() => {
       sections[currentSec].classList.remove("flex");
       sections[currentSec].classList.add("hidden");
 
-      // Exibe a nova seção
       sections[newSecIndex].classList.remove("hidden");
       sections[newSecIndex].classList.add("flex");
 
-      // Força o reflow para garantir que a classe `hidden` seja removida antes de mudar a opacidade
-      void sections[newSecIndex].offsetWidth;
 
       sections[newSecIndex].classList.remove("opacity-0");
       sections[newSecIndex].classList.remove("invisible");
 
       currentSec = newSecIndex;
-    }, 300); // Duração da transição CSS
+    }, 300);
   }
 
-  // Inicializa as seções: apenas a primeira visível
   sections.forEach((section, index) => {
     if (index === 0) {
       section.classList.remove("hidden");
@@ -100,4 +93,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   toggleMainNavBorder(navPages[0]);
+  // toggleNavbar();
 });

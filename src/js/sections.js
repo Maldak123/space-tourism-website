@@ -34,13 +34,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  function toggleDestinationNavBorder(activeItem) {
+  function toggleDestinationNavBorder(activeIndex) {
     destinationNavItems.forEach((item) => {
-      item.classList.remove("border-white");
-      item.classList.add("border-transparent");
+      item.classList.add("nav-item-inactive");
     });
-    activeItem.classList.remove("border-transparent");
-    activeItem.classList.add("border-white");
+    activeIndex.classList.remove("nav-item-inactive");
+    activeIndex.classList.add("nav-item-active");
   }
 
   function displayDestination(index) {
@@ -149,10 +148,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   loadSpaceData();
 
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     const technologySection = document.querySelector("#technology-section");
-    if (technologySection && !technologySection.classList.contains('collapse')) {
-      const activeTechIndex = Array.from(technologyPagination).findIndex(item => item.classList.contains('pagination_active'));
+    if (technologySection && !technologySection.classList.contains("opacity-0")) {
+      const activeTechIndex = Array.from(technologyPagination).findIndex((item) => item.classList.contains("pagination_active"));
       if (activeTechIndex !== -1) {
         displayTechnology(activeTechIndex);
       }

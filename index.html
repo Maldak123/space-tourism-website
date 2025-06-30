@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <html lang="en">
 
 <head>
@@ -13,116 +16,146 @@
   <title>Space Tourism Website</title>
 </head>
 
-<body class="h-screen w-screen">
-  <header class="fixed h-22 md:h-[96px] p-6 w-full flex justify-between items-center z-999
-                 md:p-0 md:gap-12
+<body class="w-screen h-screen lg:overflow-hidden">
+  <!-- Header -->
+  <header class="fixed h-22 p-6 w-full flex justify-between items-center z-50
+                 md:h-[96px] md:p-0 md:gap-12
                  lg:pt-10">
-
+    <!-- Logo Container -->
     <div class="lg:w-full lg:flex lg:relative lg:items-center">
       <img id="logo" src="./src/assets/shared/logo.svg" alt="Space Tourism Logo" class="w-10 cursor-pointer
                   md:ml-10 md:w-12
                   lg:ml-12">
+
       <span class="hidden
-                   lg:bg-white lg:opacity-25 lg:w-full lg:absolute lg:h-[1.1px] lg:flex lg:ml-32 z-9"></span>
+                   lg:block lg:bg-white lg:opacity-25 lg:w-full lg:absolute lg:h-[1px] lg:ml-32 lg:z-10"></span>
     </div>
 
+    <!-- Mobile Menu Button -->
     <img src="./src/assets/shared/icon-hamburger.svg" alt="Open Menu" aria-label="Open Menu Button" id="menu-open" class="w-6 h-5
                 md:hidden">
 
+    <!-- Navigation -->
     <nav id="nav_bar"
-      class="absolute pt-8 transition-all duration-600 ease-in-out flex top-0 w-2/3 h-screen bg-[rgba(255,255,255,5%)] backdrop-blur-2xl flex-col gap-12 items-end md:-right-0 md:h-full md:opacity-100 md:relative md:w-full md:transition-none md:px-10 lg:-right-6 lg:w-full lg:p-0 lg:h-[96px] -right-0">
+      class="absolute pt-8 top-0 w-2/3 h-screen flex flex-col gap-12 bg-[rgba(255,255,255,5%)] backdrop-blur-2xl transition-all duration-600 ease-in-out md:relative md:w-full md:h-full md:opacity-100 md:px-10 md:transition-none md:right-0 md:items-baseline lg:w-full lg:p-0 lg:h-[96px] lg:-right-6 items-end opacity-0 -right-full">
+
+      <!-- Close Menu Button -->
       <img src="./src/assets/shared/icon-close.svg" alt="Close Menu" aria-label="Close Menu Button" id="menu-close" class="w-6 h-6 mr-6 justify-self-end
                   md:hidden">
 
+      <!-- Navigation List -->
       <ul class="w-full pl-6 pr-0 text-left text-white text-base flex flex-col gap-8 font-(family-name:--barlow-c)
-                 md:h-12 md:flex-row md:justify-end md:gap-12 md:items-center
-                 lg:pl-32 lg:pr-16 lg:h-full">
-        <li class="nav_item border-r-3 md:border-r-0 md:p-0 md:h-full md:border-b-3 hover:border-[rgba(255,255,255,50%)] border-transparent"><span class="nav_span">00</span>HOME</li>
-        <li class="nav_item border-r-3 md:border-r-0 md:p-0 md:h-full md:border-b-3 hover:border-[rgba(255,255,255,50%)] border-white"><span class="nav_span">01</span>DESTINATION</li>
-        <li class="nav_item border-r-3 md:border-r-0 md:p-0 md:h-full md:border-b-3 hover:border-[rgba(255,255,255,50%)] border-transparent"><span class="nav_span">02</span>CREW</li>
-        <li class="nav_item border-r-3 md:border-r-0 md:p-0 md:h-full md:border-b-3 hover:border-[rgba(255,255,255,50%)] border-transparent"><span class="nav_span">03</span>TECHNOLOGY</li>
+                 md:flex-row md:gap-12 md:justify-end
+                 lg:pl-32 lg:pr-16 md:h-full">
+        <li class="nav_item border-r-3 hover:border-[rgba(255,255,255,50%)] md:border-r-0 md:p-0 md:h-full md:border-b-3 border-transparent">
+          <span class="nav_span">00</span>HOME
+        </li>
+        <li class="nav_item border-r-3 hover:border-[rgba(255,255,255,50%)] md:border-r-0 md:p-0 md:h-full md:border-b-3 border-transparent">
+          <span class="nav_span">01</span>DESTINATION
+        </li>
+        <li class="nav_item border-r-3 hover:border-[rgba(255,255,255,50%)] md:border-r-0 md:p-0 md:h-full md:border-b-3 border-white">
+          <span class="nav_span">02</span>CREW
+        </li>
+        <li class="nav_item border-r-3 hover:border-[rgba(255,255,255,50%)] md:border-r-0 md:p-0 md:h-full md:border-b-3 border-transparent">
+          <span class="nav_span">03</span>TECHNOLOGY
+        </li>
       </ul>
     </nav>
   </header>
 
-  <main class="relative h-full w-full pt-[88px] md:pt-[100px] lg:pt-[96px]">
+  <!-- Main Content -->
+  <main class="relative w-full h-full pt-[88px]
+               md:pt-[100px]
+               lg:pt-[96px]">
+
+    <!-- Home Section -->
     <section id="home-section"
-      class="z-4 transition-[opacity] duration-300 ease-in absolute top-0 left-0 h-full w-full bg-[url(../assets/home/background-home-mobile.jpg)] bg-cover bg-no-repeat p-6 flex-col justify-between md:bg-[url(../assets/home/background-home-tablet.jpg)] md:items-center lg:bg-[url(../assets/home/background-home-desktop.jpg)] lg:p-32 lg:justify-between lg:flex-row lg:items-end overflow-y-auto md:overflow-hidden lg:overflow-hidden opacity-0 invisible hidden">
+      class="section-base bg-[url(../assets/home/background-home-mobile.jpg)] flex-col justify-between md:bg-[url(../assets/home/background-home-tablet.jpg)] md:items-center lg:bg-[url(../assets/home/background-home-desktop.jpg)] lg:p-32 lg:justify-between lg:flex-row lg:items-end opacity-0 invisible hidden">
+
+      <!-- Content -->
       <div class="w-full text-center flex flex-col gap-6 pt-[88px]
-                      md:w-4/5 md:pt-54 md:px-10
-                      lg:max-w-[540px] lg:text-lg lg:p-0">
-        <p class="font-(family-name:--barlow-c) text-[var(--blue)] tracking-widest
+                  md:w-4/5 md:pt-54 md:px-10
+                  lg:max-w-[540px] lg:text-lg lg:p-0">
+        <p class="text-subtitle tracking-widest
                   md:text-[28px]
                   lg:text-left">SO, YOU WANT TO TRAVEL TO</p>
 
-        <h1 class="font-(family-name:--bellefair) text-white text-[80px]/[96px]
+        <h1 class="text-title text-white text-[80px]/[96px]
                    md:text-[144px] md:leading-none
                    lg:text-[144px] lg:text-left">SPACE</h1>
 
-        <p class="font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]
-                  lg:text-lg leading-[1.8] lg:text-left">Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!
+        <p class="text-body text-[var(--blue)] text-[15px]/[27px] leading-[1.8]
+                  lg:text-lg lg:text-left">
+          Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!
         </p>
       </div>
 
+      <!-- CTA Button -->
       <div class="w-full h-full flex items-center justify-center
-                      lg:h-fit lg:justify-end">
-        <button id="start_btn" class="font-(family-name:--bellefair) text-black text-lg rounded-full bg-white w-36 h-36 cursor-pointer outline-88 outline-transparent hover:outline-[rgba(255,255,255,10%)]
-                                      md:size-[272px] md:text-[32px]">EXPLORE</button>
+                  lg:h-fit lg:justify-end">
+        <button id="start_btn" class="btn-primary text-black text-lg rounded-full bg-white w-36 h-36 cursor-pointer
+                       outline-88 outline-transparent hover:outline-[rgba(255,255,255,10%)]
+                       md:size-[272px] md:text-[32px]">EXPLORE</button>
       </div>
     </section>
 
-    <section id="destination-section"
-      class="z-3 transition-[opacity] duration-300 ease-in absolute top-0 left-0 w-full h-full bg-[url(../assets/destination/background-destination-mobile.jpg)] bg-cover bg-no-repeat p-6 flex-col md:bg-[url(../assets/destination/background-destination-tablet.jpg)] md:h-screen lg:p-36 lg:pb-0 overflow-y-auto md:overflow-hidden lg:overflow-hidden flex">
-      <p class="font-(family-name:--barlow-c) text-center text-white tracking-widest
-                pt-24 p-6 lg:p-0
-                md:text-[20px] md:w-full md:text-left">
+    <!-- Destination Section -->
+    <section id="destination-section" class="section-base bg-[url(../assets/destination/background-destination-mobile.jpg)] flex-col md:bg-[url(../assets/destination/background-destination-tablet.jpg)] md:h-screen lg:pt-36 lg:pb-0 opacity-0 invisible hidden">
+
+      <!-- Section Title -->
+      <p class="section-title pt-24
+                lg:px-24 md:w-full md:text-left
+                lg:p-0">
         <span class="nav_span opacity-25">01</span>PICK YOUR DESTINATION
       </p>
 
+      <!-- Content Container -->
       <div class="pt-4 flex flex-col items-center gap-6
                   md:gap-8 md:p-0
                   lg:flex lg:flex-row lg:gap-8 lg:items-center lg:h-full">
 
-
+        <!-- Image Container -->
         <div class="flex justify-center
-                  lg:w-1/2 lg:min-w-[539px] lg:p-0">
-
-
-          <img id="dest-image" src="./src/assets/destination/image-moon.webp" alt="Moon" class="transition-opacity duration-300 w-[150px] py-[26.5px] md:size-[300px] md:p-0 md:my-8 lg:size-[480px]">
+                    lg:w-1/2 lg:min-w-[539px] lg:p-0">
+          <img id="dest-image" src="./src/assets/destination/image-europa.webp" alt="Moon" class="transition-opacity duration-300 w-[150px] py-[26.5px] md:size-[300px] md:p-0 md:my-8 lg:size-[480px]">
         </div>
 
+        <!-- Content -->
         <div class="flex flex-col w-full items-center
-                        lg:w-1/2">
+                    lg:w-1/2">
           <div class="w-full text-center flex flex-col items-center gap-6
-                    md:w-4/6
-                    lg:max-w-[445px] lg:w-fit lg:text-left">
+                      md:w-4/6
+                      lg:max-w-[445px] lg:w-fit lg:text-left">
+
+            <!-- Navigation -->
             <nav class="w-full">
-              <ul class="w-full h-8 font-(family-name:--barlow-c) tracking-[2px] text-sm text-white flex justify-center gap-8
-                      md:text-base
-                      lg:justify-start">
-                <li class="h-full text-sm nav_destination_item md:text-[16px] md:border-r-0 md:p-0 md:h-full md:border-b-3 hover:border-[rgba(255,255,255,50%)] border-white">MOON</li>
-                <li class="h-full text-sm nav_destination_item md:text-[16px] md:border-r-0 md:p-0 md:h-full md:border-b-3 hover:border-[rgba(255,255,255,50%)] border-transparent">MARS</li>
-                <li class="h-full text-sm nav_destination_item md:text-[16px] md:border-r-0 md:p-0 md:h-full md:border-b-3 hover:border-[rgba(255,255,255,50%)] border-transparent">EUROPA</li>
-                <li class="h-full text-sm nav_destination_item md:text-[16px] md:border-r-0 md:p-0 md:h-full md:border-b-3 hover:border-[rgba(255,255,255,50%)] border-transparent">TITAN</li>
+              <ul class="w-full h-8 flex justify-center gap-8 text-navigation
+                         md:text-base
+                         lg:justify-start">
+                <li class="nav_destination_item nav-item-active nav-item-inactive">MOON</li>
+                <li class="nav_destination_item nav-item-active nav-item-inactive">MARS</li>
+                <li class="nav_destination_item nav-item-active">EUROPA</li>
+                <li class="nav_destination_item nav-item-active nav-item-inactive">TITAN</li>
               </ul>
             </nav>
 
-            <h1 id="dest-name" class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[56px]/[64px] md:text-[88px] leading-none lg:text-[96px] lg:w-full">MOON</h1>
+            <!-- Title -->
+            <h1 id="dest-name" class="content-title text-white text-[56px]/[64px] md:text-[88px] leading-none lg:text-[96px] lg:w-full">EUROPA</h1>
 
-            <p id="dest-text" class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px] lg:text-lg">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take
-              in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+            <!-- Description -->
+            <p id="dest-text" class="content-description text-[var(--blue)] text-[15px]/[27px] lg:text-lg">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in
+              your snug wintery cabin.</p>
 
+            <!-- Stats -->
             <div class="w-full flex flex-col gap-6 mt-6 border-t-1 border-[rgba(255,255,255,25%)] text-center
-                    md:flex-row md:gap-6 md:items-center md:m-0">
-              <div class="pt-6 flex flex-col gap-3
-                      md:w-full md:text-center">
-                <h3 class="font-(family-name:--barlow-c) text-[var(--blue)] text-sm tracking-widest">AVG. DISTANCE</h3>
-                <p id="est_time" class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[28px]">384,400 KM</p>
+                        md:flex-row md:gap-6 md:items-center md:m-0">
+              <div class="stat-item pt-6">
+                <h3 class="stat-label">AVG. DISTANCE</h3>
+                <p id="est_time" class="stat-value">628 MIL. KM</p>
               </div>
-              <div class="flex flex-col gap-3
-                      md:pt-6 md:w-full md:text-center">
-                <h3 class="font-(family-name:--barlow-c) text-[var(--blue)] text-sm tracking-widest">EST. TRAVEL TIME</h3>
-                <p id="est_travel" class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[28px]">3 DAYS</p>
+              <div class="stat-item md:pt-6">
+                <h3 class="stat-label">EST. TRAVEL TIME</h3>
+                <p id="est_travel" class="stat-value">3 YEARS</p>
               </div>
             </div>
           </div>
@@ -130,100 +163,116 @@
       </div>
     </section>
 
-    <section id="crew-section"
-      class="z-2 transition-[opacity] duration-300 ease-in absolute top-0 left-0 w-full h-full bg-[url(../assets/crew/background-crew-mobile.jpg)] bg-cover bg-no-repeat p-6 flex-col md:bg-[url(../assets/crew/background-crew-tablet.jpg)] md:p-10 gap-8 md:h-full lg:flex-row lg:pt-[136px] overflow-y-auto md:overflow-hidden lg:overflow-hidden opacity-0 invisible hidden">
+    <!-- Crew Section -->
+    <section id="crew-section" class="section-base bg-[url(../assets/crew/background-crew-mobile.jpg)] flex-col gap-8 md:bg-[url(../assets/crew/background-crew-tablet.jpg)] md:p-10 md:h-full lg:pt-[136px] lg:px-36 flex">
 
-      <div class="w-full text-center pt-[88px]
-                    md:p-0
-                    lg:min-w-[445px] lg:max-w-[640px] lg:w-full">
+      <!-- Section Title -->
+      <p class="section-title">
+        <span class="nav_span opacity-25">02</span>MEET YOUR CREW
+      </p>
 
-        <div class="flex flex-col gap-13 w-full items-center
-                  md:gap-6 md:pt-28
-                  lg:h-full">
+      <!-- Content Container -->
+      <div class="flex flex-col w-full h-full text-center gap-8 lg:flex-row">
 
-          <p class="font-(family-name:--barlow-c) text-white tracking-widest
-                  md:text-[20px] md:w-full md:text-left"><span class="nav_span opacity-25">02</span>MEET YOUR CREW</p>
+        <!-- Text Content -->
+        <div class="flex flex-col gap-11 w-full items-center
+                    md:gap-6 md:pt-0
+                    lg:grid">
 
           <div class="flex flex-col gap-6
-                    md:max-w-[512px] md:w-full
-                    lg:text-left lg:w-fit lg:max-w-max">
+                      md:max-w-[512px] md:pt-10 md:w-full
+                      lg:text-left lg:w-fit lg:min-w-[445px] lg:max-w-[640px]">
 
-            <div class="md:flex md:flex-col md:gap-4 md:pt-10">
+            <!-- Role & Name -->
+            <div class="md:flex md:flex-col md:gap-4">
+              <p id="crew-role" class="content-role text-white text-[18px] opacity-50 md:text-2xl lg:text-[32px]">PILOT</p>
 
-              <p id="crew-role" class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[18px] opacity-50 md:text-2xl">COMMANDER</p>
-
-              <h1 id="crew-name" class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[24px] md:text-[40px]">DOUGLAS HURLEY</h1>
-
+              <h1 id="crew-name" class="content-title text-white text-[24px] md:text-[40px] lg:text-[56px]">VICTOR GLOVER</h1>
             </div>
 
-            <p id="crew-text" class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px] md:text-[16px] lg:text-lg">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third
-              time as commander of Crew Dragon Demo-2.</p>
-
+            <!-- Bio -->
+            <p id="crew-text" class="content-description text-[var(--blue)] text-[15px]/[27px] md:text-[16px] lg:text-lg">Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew
+              member of Expedition 64, and served as a station systems flight engineer.</p>
           </div>
 
-          <div class="flex gap-4 justify-center">
-
-            <div class="dots active_dot" data-index="0"></div>
+          <!-- Navigation Dots -->
+          <div class="flex gap-4 justify-center lg:self-end lg:justify-self-start lg:gap-10 lg:pb-12">
+            <div class="dots" data-index="0"></div>
             <div class="dots" data-index="1"></div>
-            <div class="dots" data-index="2"></div>
+            <div class="dots active_dot" data-index="2"></div>
             <div class="dots" data-index="3"></div>
+          </div>
+        </div>
 
+        <!-- Image -->
+        <div class="h-full w-full flex justify-center">
+          <div class="relative flex justify-center min-h-[327px] h-full max-w-8/10 w-full md:max-w-6/10 lg:max-h-9/10 lg:max-w-full">
+            <img id="crew-pic" src="./src/assets/crew/image-victor-glover.webp" alt="Victor Glover" class="absolute transition-opacity duration-300 h-full mask-b-from-77% overflow-hidden">
           </div>
         </div>
       </div>
-
-      <div class="w-full h-full flex justify-center relative
-                lg:w-1/2">
-
-        <img id="crew-pic" class="md:absolute h-full transition-opacity duration-300 mask-b-from-77% md:w-6/10 md:h-[123%] md:-bottom-25 lg:relative lg:h-fit" src="./src/assets/crew/image-douglas-hurley.webp" alt="Douglas Hurley">
-
-      </div>
     </section>
 
+    <!-- Technology Section -->
     <section id="technology-section"
-      class="z-1 transition-[opacity] duration-300 ease-in absolute top-0 left-0 w-full h-full bg-[url(../assets/technology/background-technology-mobile.jpg)] bg-cover bg-no-repeat flex-col md:bg-[url(../assets/technology/background-technology-tablet.jpg)] md:p-0 lg:bg-[url(../assets/technology/background-technology-desktop.jpg)] lg:flex-row lg:pt-[136px] lg:px-32 overflow-y-auto md:overflow-hidden lg:overflow-hidden opacity-0 invisible hidden">
-      <div class="w-full h-full text-center flex flex-col items-center gap-20 pt-[88px] p-6 pb-12
-                    md:p-10">
-        <p class="w-full font-(family-name:--barlow-c) text-white tracking-widest
-                md:pt-22 md:text-left md:text-[20px]"><span class="nav_span opacity-25">03</span>SPACE LAUNCH 101</p>
+      class="section-base bg-[url(../assets/technology/background-technology-mobile.jpg)] flex-col md:bg-[url(../assets/technology/background-technology-tablet.jpg)] lg:bg-[url(../assets/technology/background-technology-desktop.jpg)] lg:pl-32 lg:pr-0 opacity-0 invisible hidden">
 
-        <div class="flex flex-col items-center gap-8
-                  md:gap-10">
-          <img id="tech_pic" class="aspect-video transition-opacity duration-300 min-w-screen h-[258px] md:h-[357px]" src="./src/assets/technology/image-launch-vehicle-landscape.jpg" alt="">
+      <!-- Section Title -->
+      <p class="section-title
+                  md:pt-22">
+        <span class="nav_span opacity-25">03</span>SPACE LAUNCH 101
+      </p>
 
-          <div class="flex flex-col gap-8">
+      <!-- Content Container -->
+      <div class="w-full h-full text-center flex flex-col items-center gap-20
+                  pt-10 md:pt-16 lg:p-0">
+
+
+
+        <div class="flex h-full flex-col items-center gap-8
+                    md:gap-10 lg:flex-row">
+
+          <!-- Image -->
+          <div class="lg:flex lg:items-center lg:order-5 lg:h-full">
+            <img id="tech_pic" class="aspect-video transition-opacity duration-300 min-w-screen h-[258px] md:h-[357px] lg:aspect-square lg:min-w-[600px] lg:h-[600px] lg:py-8" src="./src/assets/technology/image-space-capsule-landscape.jpg" alt="">
+          </div>
+
+          <div class="flex flex-col gap-8 lg:flex-row lg:gap-16">
+
+            <!-- Pagination -->
             <div class="flex flex-col">
-              <div class="flex gap-4 justify-center">
-                <div class="pagination pagination_active">
+              <div class="flex gap-4 justify-center lg:flex-col lg:gap-8">
+                <div class="pagination">
                   <p>1</p>
                 </div>
                 <div class="pagination">
                   <p>2</p>
                 </div>
-                <div class="pagination">
+                <div class="pagination pagination_active">
                   <p>3</p>
                 </div>
               </div>
             </div>
 
+            <!-- Text Content -->
             <div class="flex flex-col gap-4 px-6
-                      md:max-w-[506px]">
-              <p class="font-(family-name:--bellefair) text-white text-[18px] opacity-50
-                      md:text-2xl">THE TERMINOLOGY…</p>
-              <h1 id="tech_name" class="transition-opacity duration-300 font-(family-name:--bellefair) text-white text-[24px] md:text-[40px]">LAUNCH VEHICLE</h1>
+                        md:max-w-[506px] lg:text-left lg:p-0">
+              <p class="content-role text-white text-[18px] opacity-50
+                        md:text-2xl lg:text-[32px]">THE TERMINOLOGY…</p>
 
-              <p id="tech_text" class="transition-opacity duration-300 font-(family-name:--barlow) text-[var(--blue)] text-[15px]/[27px]">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our
-                WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+              <h1 id="tech_name" class="content-title text-white text-[24px] md:text-[40px] lg:text-[56px]">SPACE CAPSULE</h1>
+
+              <p id="tech_text" class="content-description text-[var(--blue)] text-[15px]/[27px] lg:text-[18px]">A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during
+                the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.</p>
             </div>
           </div>
         </div>
       </div>
-
     </section>
   </main>
 
-  <script src="./src/js/sections.js"></script>
   <script src="./src/js/script.js"></script>
+  <script src="./src/js/sections.js"></script>
 
 
 </body>
