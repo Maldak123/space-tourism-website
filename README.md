@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./print)
+![](./print.png)
 ![](./screenshots/print2.jpg)
 ![](./screenshots/print3.jpg)
 
